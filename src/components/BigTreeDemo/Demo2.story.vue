@@ -1,7 +1,7 @@
 <!--
  * @Author: longmo
  * @Date: 2025-05-17 15:22:21
- * @LastEditTime: 2025-05-17 16:21:41
+ * @LastEditTime: 2025-05-17 16:25:25
  * @FilePath: src/components/BigTreeDemo/Demo2.story.vue
  * @Description:
  -->
@@ -43,7 +43,7 @@ function handleMock(){
 # Demo2
 
 ## 24w
-- 初始化赋值 时间久，卡顿甚至崩溃
+- 初始化赋值 时间久(24s 加载出，但不可点击；44s 可进行点击)，卡顿甚至崩溃
 - 滚动和折叠展开均流畅
 - 内存占用 600 - 750 MB
 
