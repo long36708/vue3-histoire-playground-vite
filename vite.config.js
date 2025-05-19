@@ -9,6 +9,9 @@ export default defineConfig({
   },
   resolve: {
     dedupe: ['vue'], // 去重
+    alias: {
+      '@': '/src'
+    }
   },
   build: {
     rollupOptions: {

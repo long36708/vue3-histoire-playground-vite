@@ -17,6 +17,9 @@ importers:
       vue:
         specifier: ^3.5.14
         version: 3.5.14
+      vue-virt-list:
+        specifier: ^1.5.11
+        version: 1.5.11(vue@3.5.14)
     devDependencies:
       '@histoire/plugin-vue':
         specifier: ^0.17.17
@@ -28,7 +31,7 @@ importers:
         specifier: ^0.17.17
         version: 0.17.17(@types/node@22.15.18)(vite@5.4.19(@types/node@22.15.18))
       vite:
-        specifier: ^5
+        specifier: ^5.4.19
         version: 5.4.19(@types/node@22.15.18)
 
 packages:
@@ -1242,6 +1245,15 @@ packages:
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
       vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+
+  vue-virt-list@1.5.11:
+    resolution: {integrity: sha512-J/qTwnoH8HejblcCv8cZE3FL0NGUuYMpF6p3uW82iMRfFD8Gl/Yizg/VtX0M9/c/QZFoquptcemXcII+I1fMfQ==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^2.0.0 || >=3.0.0
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
@@ -2564,6 +2576,11 @@ snapshots:
   vue-demi@0.14.10(vue@3.5.14):
     dependencies:
       vue: 3.5.14
+
+  vue-virt-list@1.5.11(vue@3.5.14):
+    dependencies:
+      vue: 3.5.14
+      vue-demi: 0.14.10(vue@3.5.14)
 
   vue@3.5.14:
     dependencies:

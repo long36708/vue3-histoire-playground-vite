@@ -1,5 +1,34 @@
-# Vue 3 + Vite
+## ElTreeV2
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+### 一级节点10个，二级节点 10 w个，三级节点 3个，总共 300w 个节点
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+生成数据 14s
+
+展开所有一级节点 12s
+
+单击折叠某个一级节点 6s
+
+勾选某个一级节点 12s
+
+### 一级节点10个，二级节点 1 w个，三级节点 3个，总共 30w 个节点
+生成数据 3s 内存占用 112MB
+
+单击折叠某个一级节点 1s
+
+勾选某个一级节点 1s
+## VirtTree
+
+### 一级节点10个，二级节点 10 w个，三级节点 3个，总共 300w 个节点
+
+生成数据 17s 内存占用 960MB  
+
+单击折叠某个一级节点 2min 
+
+
+### 一级节点10个，二级节点 1 w个，三级节点 3个，总共 30w 个节点
+
+生成数据 3s 内存占用 113MB
+
+单击折叠某个一级节点 17s
+
+勾选某个一级节点 17s

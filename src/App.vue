@@ -1,12 +1,10 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Demo1 from '@/views/VirtTreeDemos/Demo1.vue'
+// import Demo1 from '@/views/ElTreeV2/Demo1.vue'
 </script>
 
 <template>
-  <div>
-  <el-button>按钮</el-button>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <Demo1/>
 </template>
 
 <style scoped>

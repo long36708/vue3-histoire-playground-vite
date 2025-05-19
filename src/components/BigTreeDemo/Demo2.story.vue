@@ -1,13 +1,13 @@
 <!--
  * @Author: longmo
  * @Date: 2025-05-17 15:22:21
- * @LastEditTime: 2025-05-17 16:25:25
+ * @LastEditTime: 2025-05-19 13:41:18
  * @FilePath: src/components/BigTreeDemo/Demo2.story.vue
  * @Description:
  -->
 <script setup>
 import {shallowRef} from "vue";
-import {mockTreeData} from "./mockTreeData.js";
+import {mockTreeData} from "../../utils/mockTreeData.js";
 
 const data= shallowRef([]);
 
