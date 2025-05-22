@@ -1,7 +1,7 @@
 <!--
  * @Author: longmo
  * @Date: 2025-05-19 13:55:56
- * @LastEditTime: 2025-05-19 15:05:55
+ * @LastEditTime: 2025-05-22 19:30:56
  * @FilePath: src/views/VirtTreeDemos/Demo1.vue
  * @Description:
  -->
@@ -60,7 +60,7 @@ function expandNodeKeys() {
 
 <style scoped>
 .virt-tree-wrapper{
-  max-height: 300px;
+  height: 600px;
   width: 100%;
   overflow: auto;
 }

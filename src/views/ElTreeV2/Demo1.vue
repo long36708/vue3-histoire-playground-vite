@@ -1,7 +1,7 @@
 <!--
  * @Author: longmo
  * @Date: 2025-05-19 14:41:27
- * @LastEditTime: 2025-05-19 14:58:44
+ * @LastEditTime: 2025-05-20 11:20:49
  * @FilePath: src/views/ElTreeV2/Demo1.vue
  * @Description:
  -->
@@ -21,7 +21,19 @@ const props = {
 function handleMock(){
   data.value = mockTreeData();
 }
-
+const idleSetCheckedKeys = (treeRef, keys) => {
+  let index = 0;
+  const updateBatch = (deadline) => {
+    while (index < keys.length && deadline.timeRemaining() > 0) {
+      treeRef.value.setChecked(keys[index], true);
+      index++;
+    }
+    if (index < keys.length) {
+      requestIdleCallback(updateBatch);
+    }
+  };
+  requestIdleCallback(updateBatch);
+};
 function expandNodeKeys() {
   // treeRef.value?.expandNode(['0-0', '0-1', '0-2'], true);
   const keys = [];
@@ -32,7 +44,8 @@ function expandNodeKeys() {
     }
   }
   // treeRef.value?.expandNode(keys, true);
-  treeRef.value?.setExpandedKeys(keys);
+  treeRef.value?.setExpandedKeys('0')
+  // idleSetCheckedKeys(treeRef,keys)
 }
 </script>
 

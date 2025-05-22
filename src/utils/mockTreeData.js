@@ -1,15 +1,15 @@
 /**
  * @Author: longmo
  * @Date: 2025-05-14 14:02:03
- * @LastEditTime: 2025-05-19 15:09:21
+ * @LastEditTime: 2025-05-22 19:32:48
  * @FilePath: src/utils/mockTreeData.js
  * @Description:
  */
-export function mockTreeData(maxLength = 1_0000) {
+export function mockTreeData(maxLength = 200_0000) {
     const data = [],
-        root = 10,
+        root = 1,
         children = maxLength,
-        base = 3;
+        base = 0;
     for (let i = 0; i < root; i++) {
         data.push({
             id: `${i}`,
@@ -31,4 +31,44 @@ export function mockTreeData(maxLength = 1_0000) {
         }
     }
     return data;
+}
+
+const getKey = (prefix, id) => {
+    return `${prefix}-${id}`
+}
+/**
+ * maxDeep 最大深度
+ * maxChildren 最大子节点数
+ * minNodesNumber 最小节点数
+ * deep 当前深度
+ * key 节点key
+ * const props = {
+ *     value: 'id',
+ *     label: 'label',
+ *     children: 'children',
+ * }
+ */
+const createData = (
+    maxDeep,
+    maxChildren,
+    minNodesNumber,
+    deep = 1,
+    key = 'node'
+) => {
+    let id = 0
+    return Array.from({length: minNodesNumber})
+        .fill(deep)
+        .map(() => {
+            const childrenNumber =
+                deep === maxDeep ? 0 : Math.round(Math.random() * maxChildren)
+            const nodeKey = getKey(key, ++id)
+            // keys.value.push(nodeKey)
+            return {
+                id: nodeKey,
+                label: nodeKey,
+                children: childrenNumber
+                    ? createData(maxDeep, maxChildren, childrenNumber, deep + 1, nodeKey)
+                    : undefined,
+            }
+        })
 }
