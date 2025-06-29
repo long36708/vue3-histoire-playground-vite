@@ -1,6 +1,8 @@
 <script setup>
 // import Demo1 from '@/views/VirtTreeDemos/Demo1.vue'
-import Demo1 from '@/views/ElTreeV2/Demo1.vue'
+// import Demo1 from '@/views/ElTreeV2/Demo1.vue'
+// import Demo1 from '@/views/StickyDemo/index2.vue'
+import Demo1 from '@/views/StickyDemo/index7.vue'
 </script>
 
 <template>
